@@ -1,0 +1,24 @@
+<form [formGroup]="formulario" novalidate>
+    <ul>
+        <li>
+            <label>Titulo</label>
+            <input type="text" formControlName="titulo">
+        </li>
+        <li>
+            <label>Estado</label>
+            <select class="tipo" formControlName="estado">
+                <option value="">Selecciona un estado</option>
+                <option value="1">Abierto</option>
+                <option value="2">En proceso</option>
+                <option value="3">Cerrado</option>
+            </select>
+        </li>
+        <li>
+            <label>Descripcion</label>
+            <input type=text formControlName="descripcion">
+        </li>
+        <li>
+            <button type="button" (click)="Editar()" [routerLink]="['/listanotas']" routerLinkActive="router-link-active">Actualizar</button>
+        </li>
+    </ul>
+</form>

@@ -1,0 +1,95 @@
+#BigBox{
+    display: flex;
+    text-align: center;
+}
+
+#Abiertas{
+    margin: auto;
+    padding-right: 15px;
+}
+
+#EnProceso{
+    margin: auto;
+}
+
+#Cerrada{
+    margin: auto;
+    padding-left: 15px;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+.eliminar span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.eliminar span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.eliminar:hover {
+    background-color: rgb(158, 220, 231);
+}
+.eliminar:hover span {
+    padding-right: 25px;
+}
+
+.editar:hover {
+    background-color: #f7c2f9;
+}
+.editar:hover span {
+    padding-right: 25px;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.eliminar{
+    width: 80px;
+    height: 35px;
+    position: relative;
+    left:80px;
+    display: inline-block;
+    background-color: #7b38d8;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 15px;
+    padding-top: 3px;
+    padding-left: 1px;
+}
+.editar{
+    width: 70px;
+    height: 35px;
+    position: relative;
+    display: inline-block;
+    background-color: #7b38d8;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 15px;
+    padding-top: 3px;
+    padding-left: 1px;
+}

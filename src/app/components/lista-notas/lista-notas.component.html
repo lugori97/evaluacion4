@@ -1,0 +1,44 @@
+<div id="BigBox">
+  <div id= "Abiertas">
+      <ul class="list-group" *ngFor="let item of lista">
+          <li class="list-group-item" *ngIf="item.estado == 1"> <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+              <div class="card-header">Abierta</div>
+              <div class="card-body">
+                <h5 class="card-title">{{item.titulo}}</h5>
+                <p class="card-text">{{item.descripcion}}</p>
+                <button class="editar" [routerLink]="['/edicion',item.id]" routerLinkActive="router-link-active">Editar</button>
+                <button type="button" (click)="EliminarNota(item)" class="eliminar">Delete</button>
+              </div>
+          </div></li>
+      </ul>
+  </div>
+  <br>
+  <br>
+  <div id= "EnProceso">
+      <ul class="list-group" *ngFor="let item of lista">
+          <li class="list-group-item" *ngIf="item.estado == 2"><div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+              <div class="card-header">En Proceso</div>
+              <div class="card-body">
+                <h5 class="card-title">{{item.titulo}}</h5>
+                <p class="card-text">{{item.descripcion}}</p>
+                <button class="editar" [routerLink]="['/edicion',item.id]" routerLinkActive="router-link-active">Editar</button>
+                <button type="button" (click)="EliminarNota(item)" class="eliminar">Delete</button>
+              </div>
+          </div></li>
+      </ul>
+  </div>
+  <br>
+  <div id= "Cerrada">
+      <ul class="list-group" *ngFor="let item of lista">
+          
+          <li class="list-group-item" *ngIf="item.estado == 3"><div class="card text-white bg-danger  mb-3" style="max-width: 18rem;">
+              <div class="card-header">Cerrada</div>
+              <div class="card-body">
+                <h5 class="card-title">{{item.titulo}}</h5>
+                <p class="card-text">{{item.descripcion}}</p>
+                <button type="button" (click)="EliminarNota(item)" class="eliminar">Delete</button>
+              </div>
+          </div></li>
+      </ul>
+  </div>
+</div>
